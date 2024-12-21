@@ -1,0 +1,38 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.box {
+  margin: 0px 20px;
+}
+
+#research p {
+  cursor: pointer;
+  color: blue;
+  transition: color ease-out 0.5s;
+}
+
+#research p:hover {
+  color: red;
+}
