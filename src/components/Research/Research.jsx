@@ -4,17 +4,35 @@ import { useNavigate } from "react-router-dom";
 const Research = ({ setCurrentPage }) => {
   const navigate = useNavigate();
   const goToResearchPage = () => {
-    setCurrentPage('research');
-    navigate('/research');
-  }
+    setCurrentPage("research");
+    navigate("/research");
+  };
 
-  const array = ['Collaborative Data Processing', 'Internet of Things', 'MultiAgent-Systems', 'Intelligent Transportation Systems', 'Unmanned Vehicular Communication', 'Cyber-physical System', 'Artifical Intelligence', 'Human-centric  Autonomous Intelligent Systems', 'Software System Engineering'];
+  const array = [
+    "Collaborative Data Processing",
+    "Internet of Things",
+    "Multiagent Systems",
+    "Intelligent Transportation System",
+    "Unmanned Vehicular Communication",
+    "Cyber-physical System",
+    "Artificial Intelligence",
+    "Human-centric  Autonomous Intelligent Systems",
+    "Software System Engineering",
+    "Cooperative Communication Protocols",
+  ];
 
   return (
-    <div className="research-verticals box" id="research">
-      <h1 className="ui horizontal divider header">Research</h1>
-      <br />
-      {array.map((item) => <p onClick={() => goToResearchPage()}><li>{item}</li></p>)}
+    <div className="box" id="research">
+      <h2 className="ui top attached inverted header">Research</h2>
+      <div className="ui padded text segment">
+        {array.map((item, index) => (
+          <p onClick={() => goToResearchPage()} key={index}>
+            <i>
+              <li>{item}</li>
+            </i>
+          </p>
+        ))}
+      </div>
     </div>
   );
 };

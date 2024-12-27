@@ -1,23 +1,31 @@
 import React from "react";
-import "./Contact.css";
 
 const Contact = () => {
   return (
-    <footer className="footer" id="contact">
-      <div className="footer-content">
-        <a href="mailto:example@email.com" className="footer-link">
-          example@email.com
-        </a>
-        <a
-          href="https://www.example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-link"
-        >
-          www.example.com
-        </a>
+    <div className="box" id="contact">
+      <h2 className="ui top attached inverted header">Contact</h2>
+      <div className="ui padded text segment">
+        <p>
+          <li>
+            <a href="mailto:example@email.com" className="footer-link">
+              example@email.com
+            </a>
+          </li>
+        </p>
+        <p>
+          <li>
+            <a
+              href="https://www.example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              www.example.com
+            </a>
+          </li>
+        </p>
       </div>
-    </footer>
+    </div>
   );
 };
 

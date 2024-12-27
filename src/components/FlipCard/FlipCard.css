@@ -1,8 +1,6 @@
 .flip-cards {
   row-gap: 30px;
   column-gap: 30px;
-  justify-content: center;
-  align-items: center;
 }
 
 .flip-card {
@@ -40,4 +38,11 @@
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+@media (max-width: 600px) {
+  .flip-card {
+    width: 150px;
+    height: 150px;
+  }
 }

@@ -7,6 +7,7 @@ import Achievements from "../../components/Achievements/Achievements";
 import Publications from "../../components/Publications/Publications";
 import Positions from "../../components/Positions/Positions";
 import Teaching from "../../components/Teaching/Teaching";
+import Contact from "../../components/Contact/Contact";
 
 const Home = ({ setCurrentPage, setCurrentResearch, setCurrentPeople }) => {
 
@@ -16,14 +17,15 @@ const Home = ({ setCurrentPage, setCurrentResearch, setCurrentPeople }) => {
 
   return (
     <div className="home">
-      <About /><br /><br /><br />
-      <Research setCurrentResearch={setCurrentResearch} setCurrentPage={setCurrentPage} /><br /><br /><br />
-      <People setCurrentResearch={setCurrentPeople} setCurrentPage={setCurrentPage} /><br /><br /><br />
-      <Project /><br /><br /><br />
-      <Achievements /><br /><br /><br />
-      <Publications /><br /><br /><br />
-      <Positions /><br /><br /><br />
+      <About /><br /><br />
+      <Research setCurrentResearch={setCurrentResearch} setCurrentPage={setCurrentPage} /><br /><br />
+      <People setCurrentResearch={setCurrentPeople} setCurrentPage={setCurrentPage} /><br /><br />
+      <Project /><br /><br />
+      <Achievements /><br /><br />
+      <Publications /><br /><br />
+      <Positions /><br /><br />
       <Teaching /><br /><br />
+      <Contact /><br />
     </div>
   );
 };

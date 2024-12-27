@@ -7,7 +7,7 @@ const Card = () => {
         <img src="src/assets/image.png" />
       </div>
       <div className="content">
-        <div className="header">Elyse</div>
+        <div className="ui medium header">Elyse</div>
         <div className="meta">
           <p>Faculty</p>
         </div>

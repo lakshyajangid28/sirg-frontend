@@ -37,6 +37,9 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
           <a className="item" href="#teaching">
             Teaching
           </a>
+          <a className="item" href="#contact">
+            Contact
+          </a>
         </>
       ) : (
         <>
@@ -45,9 +48,6 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
           </a>
         </>
       )}
-      <a className="item" href="#contact">
-        Contact
-      </a>
     </div>
   );
 };

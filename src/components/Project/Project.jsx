@@ -2,13 +2,16 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="projects box" id="project">
-      <h1 className="ui horizontal divider header">Projects</h1>
-      <br />
-      <h2>B. Tech.</h2>
-      <div className="btech box ">
+    <div className="box" id="project">
+      <h2 className="ui top attached inverted header">Project</h2>
+      <div className="ui padded text segment">
+        <div className="ui medium header">B. Tech.</div>
+        <hr />
         <p>
-          <li>Collaborative Deployment Strategy for Hybrid Computation in the IoT Environment</li>
+          <li>
+            Collaborative Deployment Strategy for Hybrid Computation in the IoT
+            Environment
+          </li>
         </p>
         <p>
           <li>Smart Waste Management Unit with Automated Waste Segregation</li>
@@ -17,12 +20,13 @@ const Project = () => {
           <li>StockEase: LNMIIT Stores Management Portal</li>
         </p>
         <p>
-          <li>Art Style: Identification, Conversion and Plagiarism Detection</li>
+          <li>
+            Art Style: Identification, Conversion and Plagiarism Detection
+          </li>
         </p>
-      </div>
-      <br />
-      <h2>LUSIP</h2>
-      <div className="lusip box ">
+        <br />
+        <div className="ui medium header">LUSIP</div>
+        <hr />
         <p>
           <li>Academic Management Portal for PhD</li>
         </p>
@@ -32,10 +36,21 @@ const Project = () => {
         <p>
           <li>Game-theoretic Approach to Drone-based Communication</li>
         </p>
-      </div>
-      <br />
-      <h2>Others</h2>
-      <div className="others box ">
+        <br />
+        <div className="ui medium header">Research Project</div>
+        <hr />
+        <p>
+          <li>Academic Management Portal for PhD</li>
+        </p>
+        <p>
+          <li>Employee Leave Management Portal</li>
+        </p>
+        <p>
+          <li>Game-theoretic Approach to Drone-based Communication</li>
+        </p>
+        <br />
+        <div className="ui medium header">Others</div>
+        <hr />
         <p>
           <li>Avtaran: LNMIIT Birthday Felicitation Application</li>
         </p>

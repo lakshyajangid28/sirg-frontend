@@ -16,7 +16,7 @@ const FlipCard = () => {
 
         {/* Back side of the card */}
         <div className="flip-card-back">
-          <h3>Card Title</h3>
+          <div className="ui medium header">Card Title</div>
           <p>This is the content revealed when the card flips.</p>
         </div>
       </div>
