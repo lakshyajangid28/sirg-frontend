@@ -5,8 +5,8 @@ const People = () => {
   return (
     <div className="box" id="people">
       <h2 className="ui top attached inverted header">People</h2>
-      <div className="ui padded text segment">
-        <div className="ui medium header">Faculty</div>
+      <div className="ui padded text segment" id="content-box">
+        <div className="ui large header">Faculty</div>
         <hr />
         <br />
         <div className="faculty">
@@ -15,7 +15,7 @@ const People = () => {
           </div>
         </div>
         <br />
-        <div className="ui medium header">Research</div>
+        <div className="ui large header">Research</div>
         <hr />
         <br />
         <div className="students">

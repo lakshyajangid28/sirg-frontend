@@ -14,7 +14,7 @@ const Teaching = () => {
   return (
     <div className="box" id="teaching">
       <h2 className="ui top attached inverted header">Teaching</h2>
-      <div className="ui padded text segment">
+      <div className="ui padded text segment" id="content-box">
         {teaching.map((item, index) => (
           <div key={index}>
             <div className="ui medium header">{item}</div>

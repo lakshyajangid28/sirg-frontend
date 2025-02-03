@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="box" id="about">
       <h2 className="ui top attached inverted header">About</h2>
-      <div className="ui padded text segment">
+      <div className="ui padded text segment" id="content-box">
         <p>
           The Symbiotic Intelligence Research Group (SIRG) aims towards
           transdisciplinary research by augmenting human intelligence with the

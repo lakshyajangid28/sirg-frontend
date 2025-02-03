@@ -4,7 +4,7 @@ const Project = () => {
   return (
     <div className="box" id="project">
       <h2 className="ui top attached inverted header">Project</h2>
-      <div className="ui padded text segment">
+      <div className="ui padded text segment" id="content-box">
         <div className="ui medium header">B. Tech.</div>
         <hr />
         <p>

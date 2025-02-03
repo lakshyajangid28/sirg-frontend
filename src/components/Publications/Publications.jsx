@@ -4,7 +4,7 @@ const Publications = () => {
   return (
     <div className="box" id="publications">
       <h1 className="ui top attached inverted header">Publications</h1>
-      <div className="ui padded text segment">
+      <div className="ui padded text segment" id="content-box">
         <div className="ui medium header">Journal</div>
         <hr />
         <p>

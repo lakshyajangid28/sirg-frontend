@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="box" id="contact">
       <h2 className="ui top attached inverted header">Contact</h2>
-      <div className="ui padded text segment">
+      <div className="ui padded text segment" id="content-box">
         <p>
           <li>
             <a href="mailto:example@email.com" className="footer-link">

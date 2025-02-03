@@ -1,23 +1,23 @@
 import React from "react";
 
-const ResearchPage = () => {
+const ResearchPage = () => {  
   return (
     <div className="research-page">
       <div className="box">
-        <h2 class="ui center aligned dividing header">Software System Engineering</h2>
+        <h2 className="ui center aligned dividing header">Software System Engineering</h2>
       </div>
       <br />
       <br />
       <div className="box" id="about">
         <h2 className="ui top attached inverted header">Overview</h2>
-        <div className="ui padded text segment"></div>
+        <div className="ui padded text segment" id="content-box"></div>
         <br />
         <h2 className="ui top attached inverted header">Key Objectives</h2>
-        <div className="ui padded text segment"></div>
+        <div className="ui padded text segment" id="content-box"></div>
         <h2 className="ui top attached inverted header">Publications</h2>
-        <div className="ui padded text segment"></div>
+        <div className="ui padded text segment" id="content-box"></div>
         <h2 className="ui top attached inverted header">People</h2>
-        <div className="ui padded text segment">
+        <div className="ui padded text segment" id="content-box">
           <div className="ui medium header">Faculty</div>
           <hr />
           <br />

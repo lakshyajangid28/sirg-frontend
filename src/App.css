@@ -5,7 +5,7 @@
 }
 
 .box {
-  margin: 0px 15px;
+  margin: 0px 200px;
 }
 
 #research p {
@@ -18,14 +18,45 @@
   color: red;
 }
 
-body {
-  background-color: gainsboro;
+p {
+  font-size: 1.2rem;
+  padding: 5px;
 }
 
-@media  (max-width: 600px) {
-  p {
-    font-size: 0.85rem;
+#content-box {
+  background: linear-gradient(to bottom right, #fcf8e6, rgb(250, 225, 192));
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 -4px 10px rgba(0, 0, 0, 0.1), 4px 0 10px rgba(0, 0, 0, 0.15), -4px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: #fdf5e6;
+}
+
+@media (max-width: 1600px) {
+  .box {
+    margin: 0px 120px;
   }
+}
+
+@media (max-width: 1024px) {
+  .box {
+    margin: 0px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    margin: 0px 40px;
+  }
+  p {
+    font-size: 1.1rem;
+    padding: 2.5px;
+  }
+}
+
+@media (max-width: 480px) {
   .box {
     margin: 0px 10px;
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Research = ({ setCurrentPage }) => {
+const Research = ({ setCurrentPage, setCurrentResearch }) => {
   const navigate = useNavigate();
   const goToResearchPage = () => {
     setCurrentPage("research");
@@ -24,7 +24,7 @@ const Research = ({ setCurrentPage }) => {
   return (
     <div className="box" id="research">
       <h2 className="ui top attached inverted header">Research</h2>
-      <div className="ui padded text segment">
+      <div className="ui padded text segment" id="content-box">
         {array.map((item, index) => (
           <p onClick={() => goToResearchPage()} key={index}>
             <i>
