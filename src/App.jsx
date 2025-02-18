@@ -7,18 +7,18 @@ import ResearchPage from "./pages/ResearchPage/ResearchPage";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('');
-  const [currentResearch, setCurrentResearch] = useState({});
+  if(!localStorage.getItem('research')) localStorage.setItem('research', {});
   return (
     <div className="app">
         <BrowserRouter>
-          <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} /><br /><br /><br />
-          <h1 className="ui huge center aligned header">
-            Symbiotic Intelligence Research Group (SIRG)
+          <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+          <h1 className="ui huge center aligned header" id="heading">
+            Symbiotic Intelligence Research Group SIRG
           </h1>
           <br /><br />
           <Routes>
-            <Route path="/" element={<Home setCurrentResearch={setCurrentResearch} setCurrentPage={setCurrentPage} />} />
-            <Route path="/research" element={<ResearchPage currentResearch={currentResearch} setCurrentPage={setCurrentPage} />} />
+            <Route path="/" element={<Home setCurrentPage={setCurrentPage} />} />
+            <Route path="/research/:id" element={<ResearchPage setCurrentPage={setCurrentPage} />} />
           </Routes>
         </BrowserRouter>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import FlipCard from "../FlipCard/FlipCard";
+import { achievements } from "../../util/util";
 
 const Achievements = () => {
   return (
@@ -8,14 +9,9 @@ const Achievements = () => {
       <div className="ui padded text segment" id="content-box">
         <br />
         <div className="ui cards flip-cards">
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
-          <FlipCard />
+          {achievements.map(ele => {
+            return <FlipCard key={ele.id} body={ele.body}/>
+          })}
         </div>
         <br />
       </div>

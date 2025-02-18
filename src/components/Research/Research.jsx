@@ -1,36 +1,24 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { research } from "../../util/util";
 
-const Research = ({ setCurrentPage, setCurrentResearch }) => {
-  const navigate = useNavigate();
+const Research = ({ setCurrentPage }) => {
   const goToResearchPage = () => {
     setCurrentPage("research");
-    navigate("/research");
   };
-
-  const array = [
-    "Collaborative Data Processing",
-    "Internet of Things",
-    "Multiagent Systems",
-    "Intelligent Transportation System",
-    "Unmanned Vehicular Communication",
-    "Cyber-physical System",
-    "Artificial Intelligence",
-    "Human-centric  Autonomous Intelligent Systems",
-    "Software System Engineering",
-    "Cooperative Communication Protocols",
-  ];
 
   return (
     <div className="box" id="research">
       <h2 className="ui top attached inverted header">Research</h2>
       <div className="ui padded text segment" id="content-box">
-        {array.map((item, index) => (
-          <p onClick={() => goToResearchPage()} key={index}>
-            <i>
-              <li>{item}</li>
-            </i>
-          </p>
+        {research.map((item, index) => (
+          <Link to={`/research/${item.id}`} key={index}>
+            <p onClick={() => goToResearchPage()}>
+              <i>
+                <li>{item.name}</li>
+              </i>
+            </p>
+          </Link>
         ))}
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import './FlipCard.css';
 
-const FlipCard = () => {
-  return (
+const FlipCard = ({ body }) => {
+  return (  
     <div className="flip-card">
       <div className="flip-card-inner">
         {/* Front side of the card */}
@@ -16,8 +16,9 @@ const FlipCard = () => {
 
         {/* Back side of the card */}
         <div className="flip-card-back">
-          <div className="ui medium header">Card Title</div>
-          <p>This is the content revealed when the card flips.</p>
+          {body.map((ele, index) => {
+            return <li key={index}>{ele}</li>
+          })}
         </div>
       </div>
     </div>

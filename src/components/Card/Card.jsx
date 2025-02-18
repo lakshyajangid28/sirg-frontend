@@ -1,10 +1,12 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ people }) => {
+  console.log(people.image);
+  
   return (
     <div className="ui card">
       <div className="image">
-        <img src="src/assets/image.png" />
+        <img src={people.image} />
       </div>
       <div className="content">
         <div className="ui medium header">Name</div>

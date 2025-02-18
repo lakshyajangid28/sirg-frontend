@@ -1,4 +1,5 @@
 import React from "react";
+import { openPositions } from "../../util/util";
 
 const Positions = () => {
   return (
@@ -13,21 +14,15 @@ const Positions = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td data-label="name">James</td>
-            <td data-label="title">Student</td>
-            <td data-label="contact">Engineer</td>
-          </tr>
-          <tr>
-            <td data-label="name">Jill</td>
-            <td data-label="title">Student</td>
-            <td data-label="contact">Engineer</td>
-          </tr>
-          <tr>
-            <td data-label="name">Elyse</td>
-            <td data-label="title">Developer</td> 
-            <td data-label="contact">Designer</td>
-          </tr>
+          {openPositions.map((ele) => {
+            return (
+              <tr key={ele.id}>
+                <td data-label="name">{ele.vacancy_name}</td>
+                <td data-label="title">{ele.title}</td>
+                <td data-label="contact">{ele.contact_person}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

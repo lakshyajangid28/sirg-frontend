@@ -3,14 +3,15 @@ import axios from "axios";
 const backend_url = "http://localhost:3000";
 
 async function getAbout() {
-  const result = await axios.get(backend_url + "/get-about-body");
+  const result = await axios.get(backend_url + "/api/about/get-about-body");
   return result.data.body;
 }
 
 export const about = await getAbout();
 
+
 async function getResearch() {
-  const result = await axios.get(backend_url+'/get-research-vertical');
+  const result = await axios.get(backend_url+'/api/research-verticals/get-all-research-verticals');
   result.data.forEach(element => {
     element.key_objectives = element.key_objectives.split('#');
   });
@@ -20,50 +21,59 @@ async function getResearch() {
 export const research = await getResearch();
 
 async function getPeople() {
-  const result = await axios.get(backend_url+'/get-person');
+  const result = await axios.get(backend_url+'/api/people/get-people');
   return result.data;
 }
 
 export const people = await getPeople();
 
 async function getProject(type) {
-  const result = await axios.get(backend_url+'/get-projects', {
-    params: {
-      project_type: type
-    }
-  });
+  const result = await axios.get(backend_url+'/api/projects/get-all-projects');
+  result.data.forEach(element => {
+    element.project_details = element.project_details.split('#');
+  })
   return result.data;
 }
 
-export const project_btech = await getProject('B.Tech.');
-export const project_lusip = await getProject('LUSIP');
-export const project_others = await getProject('Others');
-export const project_research = await getProject('Research Project');
+export const project = await getProject();
 
 async function getAchievements() {
-  const result = await axios.get(backend_url+'/get-achievements');
-  return result.data;
+  const result = await axios.get(backend_url+'/api/achievements/get-achievements-body');
+  result.data.body.forEach(element => {
+    element.body = element.body.split('#');
+  });
+  return result.data.body;
 }
 
 export const achievements = await getAchievements();
 
 async function getPublications() {
-  const result = await axios.get(backend_url+'/get-publications');
+  const result = await axios.get(backend_url+'/api/publications/get-publications-body');
+  result.data.forEach(element => {
+    element.body = element.body.split('#');
+  });
   return result.data;
 }
 
 export const publications = await getPublications();
 
 async function getTeaching() {
-  const result = await axios.get(backend_url+'/get-teaching');
+  const result = await axios.get(backend_url+'/api/teaching/get-all-teaching');
   return result.data;
 }
 
 export const teaching = await getTeaching();
 
 async function getContact() {
-  const result = await axios.get(backend_url+'/get-contact');
+  const result = await axios.get(backend_url+'/api/contacts/get-all-contacts');
   return result.data;
 }
 
 export const contact = await getContact();
+
+async function getOpenPositions() {
+  const result = await axios.get(backend_url+'/api/open-positions/get-all-open-positions');
+  return result.data;
+}
+
+export const openPositions = await getOpenPositions();

@@ -1,7 +1,9 @@
 import React from "react";
 import Card from "../Card/Card";
+import { people } from "../../util/util";
 
 const People = () => {
+  console.log(people[0]);
   return (
     <div className="box" id="people">
       <h2 className="ui top attached inverted header">People</h2>
@@ -11,7 +13,7 @@ const People = () => {
         <br />
         <div className="faculty">
           <div className="ui link cards">
-            <Card />
+            <Card people={people[0]}/>
           </div>
         </div>
         <br />
@@ -20,11 +22,7 @@ const People = () => {
         <br />
         <div className="students">
           <div className="ui link cards">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <Card people={people[0]}/><Card people={people[0]}/><Card people={people[0]}/><Card people={people[0]}/>
           </div>
         </div>
       </div>

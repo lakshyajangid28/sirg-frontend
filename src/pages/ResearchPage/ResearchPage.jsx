@@ -1,31 +1,35 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { research } from "../../util/util";
 
-const ResearchPage = () => {  
+const ResearchPage = () => {
+  const { id } = useParams();
+  const currentResearch = research.find((item) => item.id === parseInt(id));
+
   return (
     <div className="research-page">
       <div className="box">
-        <h2 className="ui center aligned dividing header">Software System Engineering</h2>
+        <h2 className="ui center aligned dividing header">
+          {currentResearch.name}
+        </h2>
       </div>
       <br />
       <br />
       <div className="box" id="about">
         <h2 className="ui top attached inverted header">Overview</h2>
-        <div className="ui padded text segment" id="content-box"></div>
+        <div className="ui padded text segment" id="content-box">
+          <p>{currentResearch.overview}</p>
+        </div>
         <br />
         <h2 className="ui top attached inverted header">Key Objectives</h2>
-        <div className="ui padded text segment" id="content-box"></div>
-        <h2 className="ui top attached inverted header">Publications</h2>
-        <div className="ui padded text segment" id="content-box"></div>
-        <h2 className="ui top attached inverted header">People</h2>
         <div className="ui padded text segment" id="content-box">
-          <div className="ui medium header">Faculty</div>
-          <hr />
-          <br />
-          <div className="ui medium header">Current Students</div>
-          <hr />
-          <br />
-          <div className="ui medium header">Past Students</div>
-          <hr />
+          {currentResearch.key_objectives.map((item) => {
+            return (
+              <p>
+                <li key={currentResearch.id}>{item}</li>
+              </p>
+            );
+          })}
         </div>
       </div>
     </div>
