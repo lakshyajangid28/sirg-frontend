@@ -6,7 +6,7 @@ const Contact = () => {
   const web = `https://${contact[1].value}`
   return (
     <div className="box" id="contact">
-      <h2 className="ui top attached inverted header">Contact</h2>
+      <h2 className="ui top attached inverted bold header">Contact</h2>
       <div className="ui padded text segment" id="content-box">
         <p>
           <li>

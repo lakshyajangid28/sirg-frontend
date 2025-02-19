@@ -9,7 +9,7 @@ const Research = ({ setCurrentPage }) => {
 
   return (
     <div className="box" id="research">
-      <h2 className="ui top attached inverted header">Research</h2>
+      <h2 className="ui top attached inverted bold header">Research</h2>
       <div className="ui padded text segment" id="content-box">
         {research.map((item, index) => (
           <Link to={`/research/${item.id}`} key={index}>

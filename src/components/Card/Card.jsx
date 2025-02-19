@@ -1,19 +1,21 @@
 import React from "react";
 
-const Card = ({ people }) => {
-  console.log(people.image);
-  
+const Card = ({ person }) => {
   return (
     <div className="ui card">
       <div className="image">
-        <img src={people.image} />
+        {person.image ? (
+          <img src={`${person.image}`} alt="Person" />
+        ) : (
+          <img src="src/assets/image.png" alt="Default" />
+        )}
       </div>
       <div className="content">
-        <div className="ui medium header">Name</div>
+        <div className="ui medium bold header">{person.name}</div>
         <div className="meta">
-          Designation
+          {person.category?.charAt(0).toUpperCase() + person.category?.slice(1)}
           <br />
-          Department
+          {person.description}
         </div>
       </div>
     </div>

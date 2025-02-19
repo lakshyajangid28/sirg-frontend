@@ -9,19 +9,19 @@ const ResearchPage = () => {
   return (
     <div className="research-page">
       <div className="box">
-        <h2 className="ui center aligned dividing header">
+        <h2 className="ui center aligned dividing bold header">
           {currentResearch.name}
         </h2>
       </div>
       <br />
       <br />
       <div className="box" id="about">
-        <h2 className="ui top attached inverted header">Overview</h2>
+        <h2 className="ui top attached inverted bold header">Overview</h2>
         <div className="ui padded text segment" id="content-box">
           <p>{currentResearch.overview}</p>
         </div>
         <br />
-        <h2 className="ui top attached inverted header">Key Objectives</h2>
+        <h2 className="ui top attached inverted bold header">Key Objectives</h2>
         <div className="ui padded text segment" id="content-box">
           {currentResearch.key_objectives.map((item) => {
             return (

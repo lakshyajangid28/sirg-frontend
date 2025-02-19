@@ -4,12 +4,12 @@ import { publications } from "../../util/util";
 const Publications = () => {
   return (
     <div className="box" id="publications">
-      <h1 className="ui top attached inverted header">Publications</h1>
+      <h1 className="ui top attached inverted bold header">Publications</h1>
       <div className="ui padded text segment" id="content-box">
         {publications.map((ele, index) => {
           return (
             <div key={index}>
-              <div className="ui medium header">{ele.type}</div>
+              <div className="ui large bold header">{ele.type}</div>
               <hr />
               {ele.body.map((item, index) => {
                 return (

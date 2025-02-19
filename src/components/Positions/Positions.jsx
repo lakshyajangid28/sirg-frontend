@@ -4,7 +4,7 @@ import { openPositions } from "../../util/util";
 const Positions = () => {
   return (
     <div className="box" id="positions">
-      <h2 className="ui top attached inverted header">Positions</h2>
+      <h2 className="ui top attached inverted bold header">Positions</h2>
       <table className="ui table" id="content-box">
         <thead>
           <tr>

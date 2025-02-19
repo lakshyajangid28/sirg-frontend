@@ -1,28 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
+import axios from "axios";
 import { people } from "../../util/util";
 
 const People = () => {
-  console.log(people[0]);
+  const [faculty, setFaculty] = useState([]);
+  const [students, setStudents] = useState([]);
+
+  // Fetch people data from backend
+  useEffect(() => {
+    const facultyMembers = people.filter(
+      (person) => person.category.toLowerCase() === "faculty"
+    );
+    const studentMembers = people.filter(
+      (person) => person.category.toLowerCase() === "student"
+    );
+    setFaculty(facultyMembers);
+    setStudents(studentMembers);
+  }, []);
+
   return (
     <div className="box" id="people">
-      <h2 className="ui top attached inverted header">People</h2>
+      <h2 className="ui top attached inverted bold header">People</h2>
       <div className="ui padded text segment" id="content-box">
-        <div className="ui large header">Faculty</div>
+        {/* Faculty Section */}
+        <div className="ui large bold header">Faculty</div>
         <hr />
         <br />
         <div className="faculty">
           <div className="ui link cards">
-            <Card people={people[0]}/>
+            {faculty.length > 0 ? (
+              faculty.map((person) => <Card key={person.id} person={person} />)
+            ) : (
+              <p>No faculty members found.</p>
+            )}
           </div>
         </div>
         <br />
-        <div className="ui large header">Research</div>
+
+        {/* Student Section */}
+        <div className="ui large bold header">Research Students</div>
         <hr />
         <br />
         <div className="students">
           <div className="ui link cards">
-          <Card people={people[0]}/><Card people={people[0]}/><Card people={people[0]}/><Card people={people[0]}/>
+            {students.length > 0 ? (
+              students.map((person) => <Card key={person.id} person={person} />)
+            ) : (
+              <p>No students found.</p>
+            )}
           </div>
         </div>
       </div>

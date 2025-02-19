@@ -12,7 +12,7 @@ const App = () => {
     <div className="app">
         <BrowserRouter>
           <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-          <h1 className="ui huge center aligned header" id="heading">
+          <h1 className="ui huge center aligned bold header" id="heading">
             Symbiotic Intelligence Research Group SIRG
           </h1>
           <br /><br />
